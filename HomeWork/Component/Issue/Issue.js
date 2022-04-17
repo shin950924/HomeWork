@@ -86,7 +86,7 @@ const Issue = () => {
                   <View style={{flexDirection: 'row', alignSelf: 'center'}}>
                     <TouchableOpacity
                       onPress={() => {
-                        if (currentPage > 1) {
+                        if (title.page > 1) {
                           page(item.user.login, index, title.page - 1);
                         } else {
                           alert('첫번째 페이지 입니다.');
@@ -117,7 +117,7 @@ const Issue = () => {
                     </View>
                     <TouchableOpacity
                       onPress={() => {
-                        if (currentPage < title.issue_cnt / per_page) {
+                        if (title.page < title.issue_cnt) {
                           page(item.user.login, index, title.page + 1);
                         } else {
                           alert('마지막 페이지 입니다.');
